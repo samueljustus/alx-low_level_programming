@@ -8,15 +8,11 @@
 
 int main(void)
 {
-int intergerType;
-float floatType;
-char charType;
-double doubleType;
-
-/* size of operator is used to evaluate size of variable */
-printf("size of int: %1d bytes\n", sizeof(intergerType));
-printf("size of float: 1%d bytes\n", sizeof(floatType));
-printf("size of char: 1%d byte\n", sizeof(charType));
-printf("size of double: 1%d bytes\n", sizeof(doubleType));
+printf("size of char is=%i byte\n", sizeof(char));
+printf("size of int is=%i bytes\n", sizeof(int));
+printf("size of long int is=%i bytes\n", sizeof(long int));
+printf("size of long long int is=%i bytes\n", sizeof(long long int));
+printf("size of float is=%i bytes\n", sizeof(float));
 return (0);
 }
+
