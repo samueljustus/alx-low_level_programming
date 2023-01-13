@@ -1,28 +1,28 @@
 #include <stdio.h>
 /**
- * main-progrtam entry point
- * Return:0 success, non zero fail
+ * main - prints single digit numbers
+ *
+ * Description: prints single digit numbers with commas
+ * Return: always returns 0
  */
 int main(void)
 {
-	int m, i, j;
+	int a;
+	int b;
+	int c;
 
-	for (i = '0'; i <= '9'; i++)
+	for (a = 0; a <= 9; a++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		for (b = 0; b <= 9; b++)
 		{
-			for (m = '0'; m <= '9'; m++)
+			for (c = 0; c <= 9; c++)
 			{
-				if (i < j && j < m)
+				if (c > b && b > a)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(m);
-					if (i == '7' && j == '8' && m == '9')
-					{
-						break;
-					}
-					else
+					putchar(a + '0');
+					putchar(b + '0');
+					putchar(c + '0');
+					if (a != 7 || b != 8 || c != 9)
 					{
 						putchar(',');
 						putchar(' ');
@@ -31,7 +31,6 @@ int main(void)
 			}
 		}
 	}
-	putchar ('\n');
-				return (0);
+	putchar('\n');
+	return (0);
 }
-

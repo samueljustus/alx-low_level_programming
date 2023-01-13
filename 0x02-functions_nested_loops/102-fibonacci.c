@@ -1,30 +1,29 @@
 #include <stdio.h>
-
 /**
- *main - Prints the add of the Fibonacci numbers
- *
- * Return: Always 0.
+ * main - a program that prints the first 50 Fibonacci numbers
+ * starting with 1 and 2, followed by a new line.
+ * Description: computes and prints the sum of all the multiples of 3 or
+ * 5 bellow 1024 (excluded), floowed by a new line
+ * Return: 0
  */
-
 int main(void)
-
 {
-	int c;
-	long int n1, n2, fn;
+	long int x, y, z, next;
 
-	n1 = 1;
-	n2 = 2;
-	printf("%ld, %ld", n1, n2);
-	for (c = 0; c < 48; c++)
-
+	y = 1;
+	z = 2;
+	for (x = 1; x <= 50; x++)
 	{
-		fn = n1 + n2;
-		printf(", %ld", fn);
-		n1 = n2;
-		n2 = fn;
-
+		if (y != 20365011074)
+		{
+			printf("%ld, ", y);
+		} else
+		{
+			printf("%ld\n", y);
+		}
+		next = y + z;
+		y = z;
+		z = next;
 	}
-	printf("\n");
 	return (0);
-
 }

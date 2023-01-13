@@ -1,35 +1,32 @@
 #include <stdio.h>
-
 /**
- * main-entry point
+ * main - print if the number is positive, zero, or negative
  *
- * Description: prints all possible combinations of two two-digit numbers
- *
- * Return:0 success, non zero fail
+ * Description: using the main function
+ * this program prints "Programming is positive, zero, or negative
+ * Return: 0
  */
-
 int main(void)
 {
-	int i, j;
+	int i;
+	int j;
 
-	for (i = 0; i < 99; i++)
+	for (i = 0; i <= 99; i++)
+{
+	for (j = i + 1; j <= 99; j++)
 	{
-		for (j = i + 1; j <= 99; j++)
+		putchar(i / 10 + '0');
+		putchar(i % 10 + '0');
+		putchar(' ');
+		putchar(j / 10 + '0');
+		putchar(j % 10 + '0');
+		if (!(i == 98 && j == 99))
 		{
-			putchar('0' + i / 10);
-			putchar('0' + i % 10);
-
-			putchar(' ');
-
-			putchar('0' + j / 10);
-			putchar('0' + j % 10);
-
-			if (i == 98 && j == 99)
-				break;
 			putchar(',');
 			putchar(' ');
 		}
 	}
-	putchar('\n');
-	return (0);
+}
+putchar('\n');
+return (0);
 }

@@ -2,37 +2,34 @@
 #include "main.h"
 
 /**
- * print_square - prints squares
+ * print_square - function that prints 10 times the numbers, from 0 to 14
  * @size: parameter
  * Return: returns nothing
  */
 
 void print_square(int size)
-
 {
-	 int inc1, inc2; if (size > 0)
+	int i = 0, j;
 
-	 {
-		 for (inc1 = 0; inc1 < size; inc1++)
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		while (i < size)
+		{
+			j = 0;
 
-		 {
-			 for (inc2 = 0; inc2 < (size - 1); inc2++)
+			while (j < size)
+			{
+				_putchar('#');
 
-			 {
-				  putchar('#');
+				j++;
+			}
+			_putchar('\n');
 
-			 }
-			 putchar('#');
-			 putchar('\n');
-
-		 }
-
-	 }
-	 else
-
-	 {
-		  putchar('\n');
-
-	 }
-
+			i++;
+		}
+	}
 }
